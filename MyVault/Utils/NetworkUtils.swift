@@ -17,8 +17,8 @@ enum HTTPMethod: String {
 class NetworkManager {
     static let shared = NetworkManager()
     
-    private let baseURL = "https://ios-backend-5zdx.onrender.com/"
-//    private let baseURL = "http://127.0.0.1:8080/"
+    //private let baseURL = "https://ios-backend-5zdx.onrender.com/"
+      private let baseURL = "http://127.0.0.1:8888/"
     
     private init() {}
     

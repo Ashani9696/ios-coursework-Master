@@ -24,27 +24,27 @@ class AuthenticationViewModel: ObservableObject {
     var cancellables = Set<AnyCancellable>()
     
     func validateReg() -> Bool {
-        if self.regUsername.isEmpty {
-            self.isLoading = false
-            return false
-        }
+//        if self.regUsername.isEmpty {
+//            self.isLoading = false
+//            return false
+//        }
+//        
+//        if self.regEmail.isEmpty {
+//            self.isLoading = false
+//            return false
+//        }
+//        
+//        if self.regPassword.isEmpty {
+//            self.isLoading = false
+//            return false
+//        }
         
-        if self.regEmail.isEmpty {
-            self.isLoading = false
-            return false
-        }
-        
-        if self.regPassword.isEmpty {
-            self.isLoading = false
-            return false
-        }
-        
-        let emailRegex = #"^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$"#
-        let emailPredicate = NSPredicate(format: "SELF MATCHES %@", emailRegex)
-        if !emailPredicate.evaluate(with: self.regEmail) {
-            self.isLoading = false
-            return false
-        }
+//        let emailRegex = #"^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$"#
+//        let emailPredicate = NSPredicate(format: "SELF MATCHES %@", emailRegex)
+//        if !emailPredicate.evaluate(with: self.regEmail) {
+//            self.isLoading = false
+//            return false
+//        }
         
         return true
     }
